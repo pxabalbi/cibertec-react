@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react" //  Importar la libreria de React
 import Title from "../components/common/title";
+import SongDetails from "../components/song/SongDetails";
 import { getTrackById, Track } from "../data/tracks"
 
 export default function Song(): JSX.Element {
@@ -22,8 +23,6 @@ export default function Song(): JSX.Element {
         <p>Respuesta en JSON de Azure!</p>
         {!track && <p>Cargando...</p>}
 
-        <pre>
-            {JSON.stringify(track)}
-        </pre>
+        {track && <SongDetails track={track} />}
     </div>
 }
