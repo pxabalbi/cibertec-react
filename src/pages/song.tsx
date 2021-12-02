@@ -19,7 +19,7 @@ export default function Song(): JSX.Element {
     }, []) // Los corchete vacios significa que solo se va a ejecutar este codigo en la primera carga
     return <div>
         {track && <Title text={track.name} />}
-        <p>Respuesta en JSON</p>
+        <p>Respuesta en JSON de Azure!</p>
         {!track && <p>Cargando...</p>}
 
         <pre>
